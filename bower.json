@@ -1,0 +1,23 @@
+{
+  "name": "spotify-app",
+  "description": "",
+  "main": "",
+  "authors": [
+    "senya webster",
+    "javier jimenez",
+    "aaron rohrbacher",
+    "keegan ruebling"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
