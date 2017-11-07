@@ -1,0 +1,22 @@
+<h3>add a new party</h3>
+<div>
+  <div>
+    <label>Party name:</label>
+    <br>
+    <input #newParty>
+  </div>
+
+  <div>
+    <label>location:</label>
+    <br>
+    <input #newLocation>
+  </div>
+
+  <div>
+    <label>put the date herer animal:</label>
+    <br>
+    <input #newDate>
+  </div>
+
+  <button (click)="submitForm(newParty.value, newLocation.value, newDate.value); newParty.value=''; newLocation.value=''; newDate.value=''">Add</button>
+</div>

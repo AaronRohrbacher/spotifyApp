@@ -10,6 +10,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { StartPartyComponent } from './start-party/start-party.component';
+import { PartiesComponent } from './parties/parties.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +23,9 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    StartPartyComponent,
+    PartiesComponent
   ],
   imports: [
     BrowserModule,
