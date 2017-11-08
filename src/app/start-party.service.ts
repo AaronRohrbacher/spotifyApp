@@ -10,4 +10,14 @@ export class StartPartyService {
     this.parties = database.list('start-party');
   }
 
+  getParties(){
+    return this.parties;
+  }
+
+  addParty(newParty: Party) {
+    this.parties.push(newParty)
+  }
+
+  
+
 }

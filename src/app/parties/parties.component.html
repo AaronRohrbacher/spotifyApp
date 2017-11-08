@@ -1,3 +1,11 @@
-<p>
-  parties works!
-</p>
+<h2>Parties</h2>
+
+<div *ngFor="let party of parties | async" class="panel panel-default">
+  <div class="panel-body" (click)="goToDetailPage(party)">
+    <h3>{{party.name}}</h3>
+    <h3>{{party.location}}</h3>
+    <h3>{{party.date}}</h3>
+    <h3>{{party.danceability}}</h3>
+
+  </div>
+</div>

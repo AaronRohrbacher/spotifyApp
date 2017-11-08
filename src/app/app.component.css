@@ -4,4 +4,15 @@
    border-color: transparent;
 }
 
-.navbar a { color: white } 
+.navbar a { color: white }
+
+.footer {
+  position: fixed;
+  opacity: 0.3;
+  /*background: black;*/
+  background-color: transparent;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+}

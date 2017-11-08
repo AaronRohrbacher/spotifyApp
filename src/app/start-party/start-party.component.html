@@ -1,5 +1,7 @@
-<h3>add a new party</h3>
-<div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="text-center">
+
+  <h3>Create a new party you aninal</h3>
   <div>
     <label>Party name:</label>
     <br>
@@ -13,10 +15,15 @@
   </div>
 
   <div>
-    <label>put the date herer animal:</label>
+    <label>put the date here animal:</label>
     <br>
     <input #newDate>
   </div>
-
-  <button (click)="submitForm(newParty.value, newLocation.value, newDate.value); newParty.value=''; newLocation.value=''; newDate.value=''">Add</button>
+  <div>
+    <label>Desired Danceability</label>
+    <br>
+    <input #newDanceability>
+  </div>
+  <br>
+  <button class="btn btn-success" (click)="submitForm(newParty.value, newLocation.value, newDate.value, newDanceability.value); newParty.value=''; newLocation.value=''; newDate.value=''; newDanceability.value=''">I N I T &nbsp; P A R T Y</button>
 </div>

@@ -9,23 +9,31 @@ body {
 
 
 h1 {
-   font-size: 60px;
+   font-size: 70px;
  }
 
 
 hr {
   display: block;
   padding: 0;
-  width: 21em;
+  width: 30em;
   height: 0;
   max-height: 0;
   line-height: 1;
   margin: 0.5em auto 0.5em auto;
-  border-width: 2px;
+  border-width: 3px;
 }
 
 .music {
   text-align: center;
   padding-top: 30vh;
   color: white;
+}
+
+.btn {
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 500px;
+  padding: 8px 35px 6px;
+  float: center;
 }
