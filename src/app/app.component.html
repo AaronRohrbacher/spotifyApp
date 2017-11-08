@@ -1,21 +1,11 @@
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">HOME</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="parties">Parties</a></li>
-    </ul>
-  </div>
-</nav>
 
-<div class="container">
-  <h1>{{title}}</h1>
+
+  <header class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" routerLink="">HOME</a>
+          <a class="navbar-brand navbar-left" routerLink="parties">Parties</a>
+        </div>
+      </div>
+  </header>
   <router-outlet></router-outlet>
-</div>
-
-<!-- <footer class="footer">
-  <div class="container">
-    <a class="text-muted" routerLink="partyManager">PartyManager</a>
-  </div>
-</footer> -->

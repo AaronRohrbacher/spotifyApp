@@ -1,0 +1,31 @@
+body {
+  background: url('https://images.unsplash.com/photo-1507313968404-18fa860910cb?auto=format&fit=crop&w=2100&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  max-height: 120%;
+}
+
+
+
+h1 {
+   font-size: 60px;
+ }
+
+
+hr {
+  display: block;
+  padding: 0;
+  width: 21em;
+  height: 0;
+  max-height: 0;
+  line-height: 1;
+  margin: 0.5em auto 0.5em auto;
+  border-width: 2px;
+}
+
+.music {
+  text-align: center;
+  padding-top: 30vh;
+  color: white;
+}

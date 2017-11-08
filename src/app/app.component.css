@@ -1,0 +1,7 @@
+.navbar {
+   opacity: 0.3;
+   background: black;
+   border-color: transparent;
+}
+
+.navbar a { color: white } 
