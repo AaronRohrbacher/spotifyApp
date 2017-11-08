@@ -1,13 +1,10 @@
-<h2>Parties</h2>
-
-<div *ngFor="let party of parties | async" class="panel panel-default">
-  <div class="panel-body" (click)="goToDetailPage(party)">
-    <h3>{{party.name}}</h3>
-    <h3>{{party.location}}</h3>
-    <h3>{{party.date}}</h3>
-    <h3>{{party.danceability}}</h3>
-
+<body>
+  <h2>Parties</h2>
+  <div *ngFor="let party of parties | async" class="panel panel-default">
+    <div class="panel-body">
+      <h3>{{party.name}}</h3>
+      <h3>{{party.location}}</h3>
+    </div>
+    <button (click)="beingDeletingParty(party)">Delete</button>
   </div>
-  <button class="btn" (click)="deleteParty(selectedParty)">Crash the Party</button>
-  <br>
-</div>
+</body>

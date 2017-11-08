@@ -19,7 +19,7 @@ export class StartPartyService {
   }
 
   getPartyById(partyId: string) {
-    return this.database.object('/parties/' + partyId);
+    return this.database.object('/start-party/' + partyId);
   }
 
   deleteParty(localPartyToDelete) {

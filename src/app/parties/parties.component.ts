@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Party } from '../party.model';
 import { Router } from '@angular/router';
 import { StartPartyService } from '../start-party.service';
@@ -13,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 
 export class PartiesComponent implements OnInit {
+  @Input() selectedParty;
   parties: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
@@ -23,8 +25,10 @@ export class PartiesComponent implements OnInit {
     this.parties = this.startPartyService.getParties();
   }
 
-  deleteParty(partyToDelete) {
+  beingDeletingParty(partyToDelete){
     this.startPartyService.deleteParty(partyToDelete);
   }
+
+
 
 }
