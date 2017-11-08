@@ -23,8 +23,8 @@ export class PartiesComponent implements OnInit {
     this.parties = this.startPartyService.getParties();
   }
 
-  // goToDetailPage(clickedParty: Party) {
-  //   this.router.navigate(['parties', clickedParty.$key]);
-  // };
+  deleteParty(partyToDelete) {
+    this.startPartyService.deleteParty(partyToDelete);
+  }
 
 }

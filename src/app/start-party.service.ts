@@ -18,6 +18,12 @@ export class StartPartyService {
     this.parties.push(newParty)
   }
 
-  
+  getPartyById(partyId: string) {
+    return this.database.object('/parties/' + partyId);
+  }
 
+  deleteParty(localPartyToDelete) {
+    let partyEntryInFirebase = this.getPartyById(localPartyToDelete.$key);
+    partyEntryInFirebase.remove();
+  }
 }
