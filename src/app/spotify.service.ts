@@ -48,7 +48,7 @@ export class SpotifyService {
   }
 
   search2(query: string, type: string): Observable<any[]> {
-    return this.query(`${query}`, [
+    return this.query(`${query}?limit=5`, [
       `q=${query}`,
       `type=${type}`
     ]);
