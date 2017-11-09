@@ -2,18 +2,16 @@
  * Angular
  */
 
-import {Component, OnInit} from '@angular/core';
-import {
-  Router,
-  ActivatedRoute,
-} from '@angular/router';
-
+import {Component, OnInit, Input} from '@angular/core';
+import { Router, ActivatedRoute, Params} from '@angular/router';
+import {Location} from '@angular/common'
 /*
  * Services
  */
 import {SpotifyService} from '../spotify.service';
 ;
 import {StartPartyService} from '../start-party.service'
+
 
 @Component({
   selector: 'app-search',
@@ -22,15 +20,18 @@ import {StartPartyService} from '../start-party.service'
   providers: [StartPartyService]
 })
 export class SearchComponent implements OnInit {
+  @Input() selectedParty;
   query: string;
   results: Object;
   results2: Object;
-
+  partyId;
 
   constructor(private spotify: SpotifyService,
               private database: StartPartyService,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private location: Location)
+               {
     this.route
       .queryParams
       .subscribe(params => { this.query = params['query'] || ''; });
@@ -38,16 +39,20 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.search();
+    this.route.params.forEach((urlParametersArray) => {
+     this.partyId = urlParametersArray['id'];
+   });
   }
 
+
+
   addPlaylist(playlistId: string): void{
-    this.router.navigate(['search'], { queryParams: { query: playlistId } })
+    this.router.navigate(['parties/' + this.partyId + '/search'], { queryParams: { query: playlistId } })
       .then(_ => this.searchPlaylist() );
-      debugger;
   }
 
   submit(query: string): void {
-    this.router.navigate(['search'], { queryParams: { query: query } })
+    this.router.navigate(['parties/' + this.partyId + '/search'], { queryParams: { query: query } })
       .then(_ => this.search() );
   }
 

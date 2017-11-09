@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { FirebaseObjectObservable } from 'angularfire2/database';
-
 @Component({
   selector: 'app-party-detail',
   templateUrl: './party-detail.component.html',
@@ -33,6 +32,7 @@ export class PartyDetailComponent implements OnInit {
       this.partyId = urlParameters['id'];
     })
     this.partyToDisplay = this.startPartyService.getPartyById(this.partyId);
+    debugger;
     this.parties = this.startPartyService.getParties();
   }
 
