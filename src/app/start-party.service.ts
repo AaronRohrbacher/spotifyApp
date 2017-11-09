@@ -17,7 +17,7 @@ export class StartPartyService {
   addParty(newParty: Party) {
     this.parties.push(newParty)
   }
-  
+
   addSongs(party, songs: string[]) {
     let partyId = this.getPartyById(party.$key)
     this.parties.push(songs)
@@ -26,6 +26,16 @@ export class StartPartyService {
   getPartyById(partyId: string) {
     return this.database.object('/start-party/' + partyId);
   }
+
+  editParty(party) {
+  let selectedParty = this.getPartyById(party.$key);
+  selectedParty.update({name: party.name,
+                  location: party.location,
+                  date: party.date,
+                  danceability: party.danceability,
+                  playlist: party.playlist,
+                });
+    }
 
   deleteParty(localPartyToDelete) {
     let partyEntryInFirebase = this.getPartyById(localPartyToDelete.$key);
