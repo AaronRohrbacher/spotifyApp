@@ -1,21 +1,21 @@
-<div class="container" style="margin-top:50px;">
-  <h1>Search</h1>
+<body>
+  <div class="music">
+    <h1>Add Your Spotify UserID</h1>
 
+    <h3>
+      <input type="text" #newquery
+        [value]="query"
+        (keydown.enter)="submit(newquery.value)">
+      <button class="btn btn-info" (click)="submit(newquery.value)">Search</button>
+    </h3>
 
-  <h3>
-    <input type="text" #newquery
-      [value]="query"
-      (keydown.enter)="submit(newquery.value)">
-    <button class="btn btn-success" (click)="submit(newquery.value)">Search</button>
-  </h3>
+    <div *ngFor="let t of results" class="well well-body">
+      <h2>{{ t.name }}</h2>
+      <button class="btn btn-info"(click)="addPlaylist(t.tracks.href)">Add Playlist!</button>
+    </div>
 
-  <div *ngFor="let t of results" class="well well-body">
-    <h2>{{ t.name }}</h2>
-    <button class="btn btn-info"(click)="addPlaylist(t.tracks.href)">Add Playlist!</button>
+    <div *ngFor="let u of results2" class="well well-body">
+      <h4>{{ u.track.name }}</h4>
+    </div>
   </div>
-
-
-  <div *ngFor="let u of results2" class="well well-body">
-    <h4>{{ u.track.name }}</h4>
-  </div>
-</div>
+</body>

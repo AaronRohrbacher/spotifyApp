@@ -1,8 +1,8 @@
-<div>
-  <h3>{{(partyToDisplay | async).name}}</h3>
-  <h4>{{(partyToDisplay | async).location}}</h4>
-  <h4>{{(partyToDisplay | async).playlist}}</h4>
-  <h4>{{partyId}}</h4>
-
-<app-search [selectedParty]="this.partyToDisplay"></app-search>
-</div>
+<body>
+  <div class="music">
+    <h3>{{(partyToDisplay | async).name}}</h3>
+    <h4>{{(partyToDisplay | async).location}}</h4>
+    <h4>{{(partyToDisplay | async).playlist}}</h4>
+  </div>
+  <app-search [selectedParty]="partyId"></app-search>
+</body>
