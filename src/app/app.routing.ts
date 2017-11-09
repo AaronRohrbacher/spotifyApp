@@ -7,8 +7,10 @@ import { PartiesComponent } from './parties/parties.component';
 import { PartyDetailComponent } from './party-detail/party-detail.component';
 
 const appRoutes: Routes = [
+  { path: 'search', redirectTo: 'search', pathMatch: 'full' },
+  { path: 'search', component: SearchComponent },
   {
-  path: 'welcome',
+  path: '',
   component: WelcomeComponent
   },
   {

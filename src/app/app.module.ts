@@ -24,11 +24,6 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
-const routes: Routes = [
-  { path: '', redirectTo: 'search', pathMatch: 'full' },
-  { path: 'search', component: SearchComponent },
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +40,6 @@ const routes: Routes = [
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    RouterModule.forRoot(routes)
   ],
   providers: [
     SPOTIFY_PROVIDERS,
