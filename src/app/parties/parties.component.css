@@ -1,0 +1,35 @@
+body {
+  background: #007991;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
+  height: 100vh;
+  max-height: 100%;
+}
+
+.well {
+  background: transparent;
+  border: green;
+}
+
+.music {
+  text-align: center;
+  padding-top: 10vh;
+  color: black;
+}
+
+.well .btn {
+  font-size: 17px;
+  line-height: 1;
+  border-radius: 500px;
+  padding: 8px 35px 6px;
+  float: center;
+}
+
+.panel {
+opacity: 0.85;
+}
+
+.panel:hover {
+opacity: 1;
+}
