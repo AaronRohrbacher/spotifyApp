@@ -10,12 +10,18 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { LocationStrategy, HashLocationStrategy, APP_BASE_HREF} from '@angular/common';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
+import { SearchComponent2 } from './search2/search2.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { StartPartyComponent } from './start-party/start-party.component';
 import { PartiesComponent } from './parties/parties.component';
 
 import { SPOTIFY_PROVIDERS } from './spotify.service';
+import { SPOTIFY_PROVIDERS2 } from './spotify2.service';
 import { PartyDetailComponent } from './party-detail/party-detail.component';
+
+import { TrackComponent } from './track/track.component';
+import { AlbumComponent } from './album/album.component';
+import { ArtistComponent } from './artist/artist.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +37,11 @@ export const firebaseConfig = {
     StartPartyComponent,
     PartiesComponent,
     SearchComponent,
-    PartyDetailComponent
+    SearchComponent2,
+    PartyDetailComponent,
+    TrackComponent,
+    AlbumComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,10 @@ export const firebaseConfig = {
   providers: [
     SPOTIFY_PROVIDERS,
     {provide: APP_BASE_HREF, useValue: '/'},
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    SPOTIFY_PROVIDERS2,
+    {provide: APP_BASE_HREF, useValue: '/'},
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })

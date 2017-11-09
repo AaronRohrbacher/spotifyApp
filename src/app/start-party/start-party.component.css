@@ -5,3 +5,31 @@
   padding: 8px 35px 6px;
   float: center;
 }
+
+
+.music {
+  text-align: center;
+  padding-top: 30vh;
+  color: black;
+}
+
+.panel {
+  opacity: 0.8;
+}
+
+body {
+  background: #108dc7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ef8e38, #108dc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
+  height: 100vh;
+  max-height: 100%;
+}
+
+label {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 40px;
+}
