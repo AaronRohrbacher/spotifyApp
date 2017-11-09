@@ -16,8 +16,8 @@ export class StartPartyComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string, date: string, location: string, danceability: string) {
-    let newParty: Party = new Party(name, date, location, danceability);
+  submitForm(name: string, date: string, location: string, danceability: string, playlist: string[] = []) {
+    let newParty: Party = new Party(name, date, location, danceability, playlist);
     this.startPartyService.addParty(newParty);
   }
 

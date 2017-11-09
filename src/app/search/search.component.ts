@@ -13,18 +13,22 @@ import {
  */
 import {SpotifyService} from '../spotify.service';
 ;
+import {StartPartyService} from '../start-party.service'
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  providers: [StartPartyService]
 })
 export class SearchComponent implements OnInit {
   query: string;
   results: Object;
   results2: Object;
 
+
   constructor(private spotify: SpotifyService,
+              private database: StartPartyService,
               private router: Router,
               private route: ActivatedRoute) {
     this.route
@@ -39,6 +43,7 @@ export class SearchComponent implements OnInit {
   addPlaylist(playlistId: string): void{
     this.router.navigate(['search'], { queryParams: { query: playlistId } })
       .then(_ => this.searchPlaylist() );
+      debugger;
   }
 
   submit(query: string): void {
@@ -78,7 +83,6 @@ export class SearchComponent implements OnInit {
 
   renderResults(res: any): void {
     this.results = null;
-    debugger;
     if (res && res.items[0].name) {
       this.results = res.items;
     } else if (res && res.items[0].track){

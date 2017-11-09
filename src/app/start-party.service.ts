@@ -17,6 +17,11 @@ export class StartPartyService {
   addParty(newParty: Party) {
     this.parties.push(newParty)
   }
+  
+  addSongs(party, songs: string[]) {
+    let partyId = this.getPartyById(party.$key)
+    this.parties.push(songs)
+  }
 
   getPartyById(partyId: string) {
     return this.database.object('/start-party/' + partyId);
