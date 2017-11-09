@@ -4,6 +4,6 @@ export class Party {
     public date: string,
     public location: string,
     public danceability: string,
-    public playlist: string[] = []
+    public playlist: object[] = []
   ) {}
 }
