@@ -19,6 +19,10 @@ import { SPOTIFY_PROVIDERS } from './spotify.service';
 import { SPOTIFY_PROVIDERS2 } from './spotify2.service';
 import { PartyDetailComponent } from './party-detail/party-detail.component';
 
+import { TrackComponent } from './track/track.component';
+import { AlbumComponent } from './album/album.component';
+import { ArtistComponent } from './artist/artist.component';
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -34,7 +38,10 @@ export const firebaseConfig = {
     PartiesComponent,
     SearchComponent,
     SearchComponent2,
-    PartyDetailComponent
+    PartyDetailComponent,
+    TrackComponent,
+    AlbumComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,

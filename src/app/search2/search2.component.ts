@@ -23,7 +23,7 @@ export class SearchComponent2 implements OnInit {
   query: string;
   results: Object;
 
-  constructor(private spotify: SpotifyService2,
+  constructor(private spotify2: SpotifyService2,
               private router: Router,
               private route: ActivatedRoute) {
     this.route
@@ -46,7 +46,7 @@ export class SearchComponent2 implements OnInit {
       return;
     }
 
-    this.spotify
+    this.spotify2
       .searchTrack(this.query)
       .subscribe((res: any) => this.renderResults(res));
   }

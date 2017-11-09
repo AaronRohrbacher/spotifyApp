@@ -8,7 +8,7 @@ import {Location} from '@angular/common';
  /*
   * Services
   */
-import {SpotifyService} from '../spotify.service';
+import {SpotifyService2} from '../spotify2.service';
 
 @Component({
   selector: 'app-album',
@@ -20,13 +20,13 @@ export class AlbumComponent implements OnInit {
   album: Object;
 
   constructor(private route: ActivatedRoute,
-              private spotify: SpotifyService, // <-- injected
+              private spotify2: SpotifyService2, // <-- injected
               private location: Location) {
     route.params.subscribe(params => { this.id = params['id']; });
   }
 
   ngOnInit(): void {
-    this.spotify
+    this.spotify2
       .getAlbum(this.id)
       .subscribe((res: any) => this.renderAlbum(res));
   }
