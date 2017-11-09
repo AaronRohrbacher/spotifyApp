@@ -20,11 +20,11 @@ import {StartPartyService} from '../start-party.service'
   providers: [StartPartyService]
 })
 export class SearchComponent implements OnInit {
-  @Input() selectedParty;
   query: string;
   results: Object;
   results2: Object;
   partyId;
+  @Input() selectedParty;
 
   constructor(private spotify: SpotifyService,
               private database: StartPartyService,
