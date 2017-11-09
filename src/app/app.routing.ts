@@ -8,7 +8,7 @@ import { PartyDetailComponent } from './party-detail/party-detail.component';
 
 const appRoutes: Routes = [
   { path: 'search', redirectTo: 'search', pathMatch: 'full' },
-  { path: 'search', component: SearchComponent },
+  // { path: 'search', component: SearchComponent },
   {
   path: '',
   component: WelcomeComponent
@@ -26,6 +26,10 @@ const appRoutes: Routes = [
   component: PartyDetailComponent
 
 },
+{
+  path: 'parties/:id/search',
+  component: SearchComponent
+}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
