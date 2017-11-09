@@ -11,6 +11,11 @@ import {Location} from '@angular/common'
 import {SpotifyService} from '../spotify.service';
 ;
 import {StartPartyService} from '../start-party.service'
+import {Party} from '../party.model'
+import { FirebaseListObservable } from 'angularfire2/database';
+
+import { FirebaseObjectObservable } from 'angularfire2/database';
+
 
 
 @Component({
@@ -20,11 +25,13 @@ import {StartPartyService} from '../start-party.service'
   providers: [StartPartyService]
 })
 export class SearchComponent implements OnInit {
-  @Input() selectedParty;
   query: string;
   results: Object;
   results2: Object;
   partyId;
+  partyFuck;
+  songs : string[] = [];
+  @Input() selectedParty;
 
   constructor(private spotify: SpotifyService,
               private database: StartPartyService,
@@ -42,6 +49,11 @@ export class SearchComponent implements OnInit {
     this.route.params.forEach((urlParametersArray) => {
      this.partyId = urlParametersArray['id'];
    });
+   this.database.getPartyById(this.partyId).subscribe(something => {
+     this.partyFuck = new Party(something.name, something.location, something.date, something.danceability, something.playlist);
+     // console.log(this.partyFuck);
+   })
+
   }
 
 
@@ -49,6 +61,7 @@ export class SearchComponent implements OnInit {
   addPlaylist(playlistId: string): void{
     this.router.navigate(['parties/' + this.partyId + '/search'], { queryParams: { query: playlistId } })
       .then(_ => this.searchPlaylist() );
+
   }
 
   submit(query: string): void {
@@ -90,8 +103,19 @@ export class SearchComponent implements OnInit {
     this.results = null;
     if (res && res.items[0].name) {
       this.results = res.items;
-    } else if (res && res.items[0].track){
+    } else if (res && res.items[0].track.name){
       this.results2 = res.items;
     }
+    for (let i = 0; i<res.items.length; i++) {
+      this.songs.push(this.results2[i].track.name);
+      console.log(this.results2[i].track.name)
+    }
+
+    console.log(this.partyFuck);
+
+    let newParty = new Party(this.partyFuck.name, this.partyFuck.location, this.partyFuck.date, this.partyFuck.danceability, this.songs)
+    let party = this.database.getPartyById(this.partyId)
+    this.database.deleteParty(this.partyId)
+    this.database.addParty(newParty)
   }
 }
