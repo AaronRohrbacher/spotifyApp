@@ -29,6 +29,10 @@ export class PartiesComponent implements OnInit {
     this.startPartyService.deleteParty(partyToDelete);
   }
 
+  goToDetailPage(clickedParty) {
+    this.router.navigate(['parties', clickedParty.$key]);
+  }
+
 
 
 }

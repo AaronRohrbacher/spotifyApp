@@ -2,8 +2,7 @@
   <h2>Parties</h2>
   <div *ngFor="let party of parties | async" class="panel panel-default">
     <div class="panel-body">
-      <h3>{{party.name}}</h3>
-      <h3>{{party.location}}</h3>
+      <h3 (click)="goToDetailPage(party)">{{party.name}}, {{party.location}}</h3>
     </div>
     <button (click)="beingDeletingParty(party)">Delete</button>
   </div>
