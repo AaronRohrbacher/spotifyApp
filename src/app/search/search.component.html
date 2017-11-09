@@ -1,21 +1,21 @@
 <div class="container" style="margin-top:50px;">
   <h1>Search</h1>
 
-  <p>
+
+  <h3>
     <input type="text" #newquery
       [value]="query"
       (keydown.enter)="submit(newquery.value)">
-    <button (click)="submit(newquery.value)">Search</button>
-  </p>
-
-
+    <button class="btn btn-success" (click)="submit(newquery.value)">Search</button>
+  </h3>
 
   <div *ngFor="let t of results" class="well well-body">
-    <p>{{ t.name }}</p>
-    <button (click)="addPlaylist(t.tracks.href)">Add Playlist!</button>
+    <h2>{{ t.name }}</h2>
+    <button class="btn btn-info"(click)="addPlaylist(t.tracks.href)">Add Playlist!</button>
   </div>
 
+
   <div *ngFor="let u of results2" class="well well-body">
-    <p>{{ u.track.name }}</p>
+    <h4>{{ u.track.name }}</h4>
   </div>
 </div>
