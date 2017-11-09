@@ -15,6 +15,7 @@ import { StartPartyComponent } from './start-party/start-party.component';
 import { PartiesComponent } from './parties/parties.component';
 
 import { SPOTIFY_PROVIDERS } from './spotify.service';
+import { PartyDetailComponent } from './party-detail/party-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     StartPartyComponent,
     PartiesComponent,
-    SearchComponent
+    SearchComponent,
+    PartyDetailComponent
   ],
   imports: [
     BrowserModule,
