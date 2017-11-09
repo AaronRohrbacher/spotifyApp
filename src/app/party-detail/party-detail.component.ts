@@ -32,7 +32,6 @@ export class PartyDetailComponent implements OnInit {
       this.partyId = urlParameters['id'];
     })
     this.partyToDisplay = this.startPartyService.getPartyById(this.partyId);
-    debugger;
     this.parties = this.startPartyService.getParties();
   }
 

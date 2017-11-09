@@ -33,6 +33,4 @@ export class PartiesComponent implements OnInit {
     this.router.navigate(['parties', clickedParty.$key]);
   }
 
-
-
 }
