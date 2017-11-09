@@ -40,7 +40,7 @@ export class SearchComponent implements OnInit {
     this.search();
   }
 
-  addPlaylist(playlistId: object): void{
+  addPlaylist(playlistId: string): void{
     this.router.navigate(['search'], { queryParams: { query: playlistId } })
       .then(_ => this.searchPlaylist() );
       debugger;

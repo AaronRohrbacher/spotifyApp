@@ -54,7 +54,7 @@ export class SpotifyService {
     ]);
   }
 
-  playlistSearch(query: object): Observable<any[]> {
+  playlistSearch(query: string): Observable<any[]> {
     return this.search2(query, 'track');
   }
 
