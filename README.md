@@ -7,9 +7,11 @@
 ## Description
 _An application to generate party playlists based on randomly drawn songs from participating party-goers' Spotify playlists._
 
-![alt text](https:// "home screen")
-![alt text](https:// "about page")
-![alt text](https:// "parties page")
+![Home Page](./src/assets/images/home.png)
+
+![Database](./src/assets/images/database.png)
+
+![Playlist](./src/assets/images/playlist.png)
 
 
 ## User Stories
@@ -22,6 +24,7 @@ _An application to generate party playlists based on randomly drawn songs from p
 * As a party manager I'd like to not only be able to create a party, but also send out invites so I don't have to make it publicly accessible.
 * As a party manager I'd like to be able to be able to select whether or not I'd like my animals to be able to choose their playlists or just have their top 5 most played songs selected automatically.
 * As a party manager, I'd like to be assigned a unique admin user/pass where I can edit the party's properties.
+* As a party manager, I'd like to assign parameters to the songs that get added to the parties playlist such as danceability, bpm, and genre.
 
 
 ![alt text](https:// "firebase")
@@ -32,7 +35,6 @@ _An application to generate party playlists based on randomly drawn songs from p
 * Node
 * JSON
 * Firebase
-* Sinatra
 * HTML
 * CSS
 * Bootstrap
@@ -44,7 +46,7 @@ _An application to generate party playlists based on randomly drawn songs from p
 
 3. _`$ npm install`_
 
-4. _`$ npm bower install`_
+4. _`$ bower install`_
 
 5. _`$ npm run prestart`_
 
@@ -72,10 +74,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Support and contact details
-_If you have any updates or suggestions please contact, [Javier Jimenez] (), [Aaron Rohrbacher] (), [Keegan Ruebling] (), [Senya Webster] (senya.webster@gmail.com), or make a contribution to our repository._
+_If you have any updates or suggestions please contact, [Javier Jimenez] (javierrcc522@gmail.com), [Aaron Rohrbacher] (arjazz@icloud.com), [Keegan Ruebling] (keegan.ruebling@gmail.com), [Senya Webster] (senya.webster@gmail.com), or make a contribution to our repository._
 
 ### License
 
 GPL License
 
-Copyright (c) 2017 Javier Jimenez, Aaron Rohrbacher, Keegan Ruebling, and Senya Webster
+Copyright J.A.K.S(c) 2017 Javier Jimenez, Aaron Rohrbacher, Keegan Ruebling, and Senya Webster
