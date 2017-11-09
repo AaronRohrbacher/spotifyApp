@@ -21,6 +21,7 @@ _An application to generate party playlists based on randomly drawn songs from p
 # Further User Stories to Explore
 * As a party manager I'd like to not only be able to create a party, but also send out invites so I don't have to make it publicly accessible.
 * As a party manager I'd like to be able to be able to select whether or not I'd like my animals to be able to choose their playlists or just have their top 5 most played songs selected automatically.
+* As a party manager, I'd like to be assigned a unique admin user/pass where I can edit the party's properties.
 
 
 ![alt text](https:// "firebase")
